@@ -43,37 +43,50 @@
         </li>
       </ul>
     </header>
-    <main >
+    <main>
       <div class="quiz-container">
           <img class="quiz-img" src="./img/quiz/bg-hero.jpg" alt="" />
           <div class="p-hero__title__label">POSSE課題</div>
           <div class="p-hero__title__inline">ITクイズ</div>
       </div>
 
-      <section class="quiz">
+
+      <div id ="quiz"></div>
+      <!-- <section class="quiz">
         <h2>Q1</h2>
         <p class="quiz-text">日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？</p>
         <img class="quiz1-img" src="./img/quiz/img-quiz01.png">
 
-        <div class="quiz-ans">
+        <div class="quiz-ans" data-section ="1">
           <h3>A</h3>
           <ul>
             <li class="quiz-ans-list">
-              <button>約28万人
+              <button id="quiz1_section1" data-answer="0">約28万人
                 <img class="quiz-ans-img" src="./sankaku.png">
               </button>
             </li>
             <li>
-              <button>約78万人
+              <button id="quiz1_section2" data-answer="1">約79万人
                 <img class="quiz-ans-img" src="./sankaku.png">
               </button>
             </li>
             <li>
-              <button>約183万人
+              <button id="quiz1_section3" data-answer="0">約183万人
                 <img class="quiz-ans-img" src="./sankaku.png">
               </button>
             </li>
           </ul>
+        </div>
+
+
+
+
+        <div id = "quiz_ans"></div>
+
+
+        <div class="quote">
+          <img class="quote-img" src="./img/icon/icon-note.svg" >
+          <p class="quote-text">経済産業省 2019年3月 - IT 人材需給に関する調査</p>
         </div>
       </section>
 
@@ -84,12 +97,14 @@
         </p>
         <img class="quiz2-img" src="./img/quiz/img-quiz02.png">
 
-        <div class="quiz-ans">
+        <div class="quiz-ans" data-section="2">
           <h3>A</h3>
           <ul >
-            <li><button>INTECH<img class="quiz-ans-img" src="./sankaku.png"></button></li>
-            <li><button>BIZZTECH<img class="quiz-ans-img" src="./sankaku.png"></button></li>
-            <li><button>X-TECH<img class="quiz-ans-img" src="./sankaku.png"></button></li>
+            <li>
+              <button data-answer="0">INTECH<img class="quiz-ans-img" src="./sankaku.png"></button>
+            </li>
+            <li><button data-answer="0" class="selections">BIZZTECH<img class="quiz-ans-img" src="./sankaku.png"></button></li>
+            <li><button data-answer="1">X-TECH<img class="quiz-ans-img" src="./sankaku.png"></button></li>
           </ul>
         </div>
       </section>
@@ -101,12 +116,12 @@
         </p>
         <img class="quiz3-img" src="./img/quiz/img-quiz03.png">
 
-        <div class="quiz-ans">
+        <div class="quiz-ans" data-section="3">
           <h3>A</h3>
           <ul >
-            <li><button>Internet of Things<img class="quiz-ans-img" src="./sankaku.png"></button></li>
-            <li><button>Integrate into Technology<img class="quiz-ans-img" src="./sankaku.png"></button></li>
-            <li><button>Information on Tool<img class="quiz-ans-img" src="./sankaku.png"></button></li>
+            <li><button data-answer="1">Internet of Things<img class="quiz-ans-img" src="./sankaku.png"></button></li>
+            <li><button data-answer="0">Integrate into Technology<img class="quiz-ans-img" src="./sankaku.png"></button></li>
+            <li><button data-answer="0">Information on Tool<img class="quiz-ans-img" src="./sankaku.png"></button></li>
           </ul>
         </div>
       </section>
@@ -119,13 +134,18 @@
         </p>
         <img class="quiz4-img" src="./img/quiz/img-quiz04.png">
 
-        <div class="quiz-ans">
+        <div class="quiz-ans" data-section="4">
           <h3>A</h3>
           <ul>
-            <li><button>Society 5.0<img class="quiz-ans-img" src="./sankaku.png"></button></li>
-            <li><button>CyPhy<img class="quiz-ans-img" src="./sankaku.png"></button></li>
-            <li><button>SDGs<img class="quiz-ans-img" src="./sankaku.png"></button></li>
+            <li><button data-answer="1">Society 5.0<img class="quiz-ans-img" src="./sankaku.png"></button></li>
+            <li><button data-answer="0">CyPhy<img class="quiz-ans-img" src="./sankaku.png"></button></li>
+            <li><button data-answer="0">SDGs<img class="quiz-ans-img" src="./sankaku.png"></button></li>
           </ul>
+        </div>
+
+        <div class="quote">
+          <img class="quote-img" src="./img/icon/icon-note.svg">
+          <p class="quote-text">Society5.0-科学技術政策-内閣府</p>
         </div>
       </section>
 
@@ -136,12 +156,12 @@
         </p>
         <img class="quiz5-img" src="./img/quiz/img-quiz05.png">
 
-        <div class="quiz-ans">
+        <div class="quiz-ans" data-section="5">
           <h3>A</h3>
           <ul >
-            <li><button>Web3.0<img class="quiz-ans-img" src="./sankaku.png"></button></li>
-            <li><button>NFT<img class="quiz-ans-img" src="./sankaku.png"></button></li>
-            <li><button>メタバーズ<img class="quiz-ans-img" src="./sankaku.png"></button></li>
+            <li><button data-answer="1">Web3.0<img class="quiz-ans-img" src="./sankaku.png"></button></li>
+            <li><button data-answer="0">NFT<img class="quiz-ans-img" src="./sankaku.png"></button></li>
+            <li><button data-answer="0">メタバーズ<img class="quiz-ans-img" src="./sankaku.png"></button></li>
           </ul>
         </div>
       </section>
@@ -153,26 +173,35 @@
         </p>
         <img class="quiz6-img" src="./img/quiz/img-quiz06.png">
 
-        <div class="quiz-ans">
+        <div class="quiz-ans" data-section="6">
           <h3>A</h3>
           <ul>
-            <li><button>約2倍<img class="quiz-ans-img" src="./sankaku.png"></button></li>
-            <li><button>約5倍<img class="quiz-ans-img" src="./sankaku.png"></button></li>
-            <li><button>約11倍<img class="quiz-ans-img" src="./sankaku.png"></button></li>
+            <li>
+              <button data-answer="0">約2倍<img class="quiz-ans-img" src="./sankaku.png"></button>
+            </li>
+            <li>
+              <button data-answer="1">約5倍<img class="quiz-ans-img" src="./sankaku.png"></button>
+            </li>
+            <li>
+              <button data-answer="0">約11倍<img class="quiz-ans-img" src="./sankaku.png"></button>
+            </li>
           </ul>
+        </div> -->
+
+        <!-- <div class="quote">
+          <img class="quote-img" src="./img/icon/icon-note.svg">
+          <p class="quote-text">Accenture Technology2021</p>
         </div>
-      </section>
+      </section> -->
 
     </main>
     <div class="p-line">
       <div class="l-container">
         <div class="p-line__body">
           <div class="p-line__body__inner">
-            <h2 class ="p-heading -light p-line__title">
-              <i class="u-icon__line">
-  
-              </i>
-              <img class="line-img" src="./img/line.png" >POSSE 公式LINE
+            <h2 class ="p-heading">
+                <img class="line-img" src="./img/line.png" >
+              <p class="LINE">POSSE 公式LINE</p>
             </h2>
             <div class="p-line__content">
               <p>
@@ -208,8 +237,8 @@
   
     </div>
     <footer id="footer" class="wrapper">
+      <div class="footer-top">
           <img class="footerImg" src="./img/logo.svg" alt="footerImg">
-          <div class="footer-top">
         <p>POSSE公式サイト</p>
         
           <ul class ="sns">
@@ -225,5 +254,6 @@
         <small class="copyright">&copy;2022PC</small>
         </div>
     </footer>
+    <script src="./quiz.js" defer></script>
   </body>
 </html>
